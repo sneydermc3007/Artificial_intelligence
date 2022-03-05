@@ -1,0 +1,30 @@
+# Algunos sintomas de transtorno de apego reactivo
+
+1. Raramente o muy pocas veces busca consuelo cuando siente malestar. -> 1 (1)
+2. Afecto positivo limitado. -> 15 (14)
+3. Reacción social y emocional mínima a los demás. -> 7 (6)
+
+# Algunos sintomas de trastorno de relación social desinhibida
+
+4. Reducción o ausencia de reticencia para aproximarse e interaccionar con adultos extraños. -> 11 (10)
+5. Comportamiento verbal o físico demasiado familiar. -> 13 (12)
+7. Recurre poco o nada al cuidador adulto después de una salida arriesgada, incluso en contextos extraños. -> 3 (3)
+
+# Algunos sintomas de Trastorno de estrés postraumático
+
+8. Experiencia directa del suceso(s) traumático(s). -> 8 (7)
+9. Comportamiento irritable y arrebatos de furia -> 14 (13)
+10. Respuesta de sobresalto exagerada -> 12 (11)
+
+# Algunos sintomas de Trastorno de estrés agudo
+
+11. Reacciones disociativas -> 4 (4)
+12. Incapacidad persistente de experimentar emociones positivas -> 10 (9)
+13. Alteración del sueño -> 5 (5)
+
+# Algunos sintomas de Trastornos de adaptación
+
+14. Malestar intenso desproporcionado a la gravedad o intensidad del factor de estrés, teniendo en cuenta el contexto externo y los factores culturales que podrían influir en la gravedad y la presentación de los síntomas. -> 9 (8)
+15. Deterioro significativos en losocial, laboral u otras áreas importantes del funcionamiento. -> 2 (2)
+
+# Otro trastorno relacionado con traumas y factores de estrés especificado

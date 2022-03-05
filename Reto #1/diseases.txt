@@ -1,0 +1,6 @@
+﻿trastorno_de_apego_reactivo
+trastorno_de_relacion_social_desinhibida
+trastorno_de_estres _postraumatico
+trastorno_de_estres _agudo
+trastorno_de_adaptacion
+otros_trastornos_relacionados
