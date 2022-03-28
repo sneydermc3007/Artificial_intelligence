@@ -10,7 +10,7 @@ def seleccion(poblacion, porcentajes):
     print(poblacion)
     
     #ordenando
-    poblacion = poblacion[poblacion[:, 10].argsort()[::-1]]
+    poblacion = poblacion[poblacion[:, 11].argsort()[::-1]]
     print("\n\t Individuos ordenados de mayor a menor")
     print(poblacion)
 
@@ -18,12 +18,11 @@ def seleccion(poblacion, porcentajes):
     mejor_Apt = poblacion[0]
 
     print("\n\t Población con mejor aptitud duplicada")
-    nueva_poblacion = poblacion[:4,]
+    nueva_poblacion = poblacion[:5,]
     nueva_poblacion = np.append(nueva_poblacion, [mejor_Apt], axis=0)
     print(nueva_poblacion)
 
-    poblacion = nueva_poblacion[:, :10]
-    
+    poblacion = nueva_poblacion[:, :11]
     return poblacion
 
 

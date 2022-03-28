@@ -9,14 +9,14 @@ from cruce import *
 cant = int(input("Ingrese la cantidad de generaciones que desea generar: "))
 
 #Paso 1, Generacion de población inicial
-cromosomas, genes = 5, 10
+cromosomas, genes = 6, 11
 
 #Datos del problema: Leche de soya (500,0.5), Galletas (300,0.1), Agua (100,0.5), Pan (700,0.25), 
 # Huevo (300,0.15), Nueces (400,0.15), Yogurt (500,0.5), Manzana (400,0.3) 
-# barra de chocolate (560, 0.2), Pan (260, 0.15)
+# barra de chocolate (560, 0.2), Pan (260, 0.15), RedBull (90, 0.2)
 
-Pesos=[0.5,0.1,0.5,0.25,0.15,0.15,0.5,0.3,0.2,0.15]
-Calorias=[500,300,100,700,300,400,500,400,560,260]
+Pesos=[0.5,0.1,0.5,0.25,0.15,0.15,0.5,0.3,0.2,0.15, 0.2]
+Calorias=[500,300,100,700,300,400,500,400,560,260, 90]
 
 poblacion = np.zeros([cromosomas,genes])
 
@@ -45,7 +45,7 @@ for i in range(cant):
     seleccion_poblacion = seleccion(poblacion, poblacion_evaluada)
     
     #Paso 4, Cruce de individuos
-    poblacion_mutada = cruce(seleccion_poblacion)
+    hijos = cruce(seleccion_poblacion)
     
     #Paso 5, Mutación de los hijos
 
