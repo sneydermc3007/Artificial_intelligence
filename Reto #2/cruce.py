@@ -12,3 +12,4 @@ def cruce(poblacion):
    print("\n\tCruce entre padres\n\t HIJOS:")
    HIJOS = np.array(HIJOS)
    print(HIJOS)
+   return HIJOS

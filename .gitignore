@@ -1,2 +1,8 @@
 # Carpeta JetBrains (IDE)
 /.idea
+
+# Entorno Virtual
+/venv
+
+# PyCache
+/'Reto #2'/__pycache__
