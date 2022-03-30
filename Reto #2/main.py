@@ -63,7 +63,7 @@ for i in range(cant):
     evaluacion_hijos = evaluacion(mutacion_hijos, cromosomas, genes, Pesos, Calorias)
 
     # Paso 7, Generando población nueva
-    poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos)
+    poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos, i)
 
 
 

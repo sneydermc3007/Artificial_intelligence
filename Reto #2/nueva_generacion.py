@@ -4,7 +4,7 @@ import numpy as np
 from sympy import pprint
 
 
-def nueva_generacion(poblacion, porcentajes):
+def nueva_generacion(poblacion, porcentajes, num):
     # Añadiendo columna porcentajes
     poblacion = np.column_stack((poblacion, porcentajes[:, 4]))
     print("\tIndividuo con su respectivo porcentaje:")
@@ -15,7 +15,7 @@ def nueva_generacion(poblacion, porcentajes):
     print("\n\t Individuos ordenados de mayor a menor")
     print(poblacion)
 
-    print('Nueva generacion')
+    print('\n\tNueva generacion')
     generacion = poblacion[poblacion[0:3,11].argsort()[::-1]]
     print(generacion)
 
@@ -44,8 +44,7 @@ def nueva_generacion(poblacion, porcentajes):
 
 
     gen=generacion[0:10,0:11]
-
     matriz= np.concatenate((gen, nueva_poblacion))
-    print("\n\tPOBLACION", matriz.shape)
+    print("\n\tPOBLACION, generación",num+1, matriz.shape)
     print(matriz)
     return matriz
