@@ -19,7 +19,7 @@ cromosomas, genes = 6, 11
 """
 Datos del problema: Leche de soya (500,0.5), Galletas (300,0.1), Agua (100,0.5), Pan (700,0.25),
 Huevo (300,0.15), Nueces (400,0.15), Yogurt (500,0.5), Manzana (400,0.3) 
-barra de chocolate (560, 0.2), Pan (260, 0.15), RedBull (90, 0.2)
+barra de chocolate (560, 0.2), Chocorramo (260, 0.15), RedBull (90, 0.2)
 """
 
 Pesos = [0.5, 0.1, 0.5, 0.25, 0.15, 0.15, 0.5, 0.3, 0.2, 0.15, 0.2]

@@ -1,16 +1,13 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 import tkinter as tk
 import tkinter
 import random
 import numpy as np
 import pandas as pd
-from evaluacion import *
-from seleccion import *
-from cruce import *
-from mutacion import *
-from evaluacion import *
-from nueva_generacion import*
+from pip import main
+from funci import *
 
 ventana= Tk()
 ventana.config(bg="white",bd=0)
@@ -37,7 +34,17 @@ ent=tk.Label(ventana,text="Numero de generaciones: ", width="20", height="1", fo
 ent.place(x=2, y=45)
 caj = Entry(ventana, width= 53, font = ("Helvetica 16"), highlightbackground='#007b99', highlightcolor='#f39200', highlightthickness=3)
 caj.place(x=250, y=45)
-btn = tk.Button(ventana, text="Calcular", width = "20", height = "1", command= "funcionhaga", font = ("Helvetica 14")
+
+#accion boton
+def haga():
+    e1 = ent.get()
+    if not e1:
+        messagebox.showerror("Error", "Ingrese una funcion")
+    result = funci(e1)
+    
+
+
+btn = tk.Button(ventana, text="Calcular", width = "20", height = "1", command= "haga", font = ("Helvetica 14")
                         ,foreground="white", bg='#007b99', activebackground='white', activeforeground='#007b99')
 btn.place(x=10, y=85)
 
