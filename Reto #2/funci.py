@@ -9,6 +9,7 @@ from evaluacion import *
 from nueva_generacion import*
 
 def funci(cant):
+    cant=int(cant)
     cromosomas, genes = 6, 11
 
     """
@@ -57,15 +58,17 @@ def funci(cant):
         # Paso 7, Generando población nueva
         poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos, i)
 
-    i=0
-    for i in range(poblacion):
-        if(poblacion == 1):
-            totalcalorias += Calorias[i]
-            totalpeso += Pesos[i]
-        else:
-            totalcalorias += 0
-            totalpeso += 0
+    poblacion_final = poblacion[0,]
+    print("\n\tMejor generacion")
+    print(poblacion_final)
 
-    result = [totalpeso, totalcalorias, poblacion]
+    Apt_peso=np.zeros([1,1])
+    Apt_cal=np.zeros([1,1])
 
-    return totalpeso, totalcalorias, poblacion
+    for h in range (1, len(poblacion_final)):
+        Apt_peso = Apt_peso + poblacion_final[h]*Pesos[h]
+        Apt_cal = Apt_cal + poblacion_final[h]*Calorias[h]
+
+    print("\nPeso total\n",Apt_peso)
+    print("Calorias total\n",Apt_cal)
+    return Apt_peso, Apt_cal, poblacion_final

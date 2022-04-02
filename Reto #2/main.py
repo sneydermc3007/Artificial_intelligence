@@ -1,4 +1,4 @@
-#!/usr/bin/python
+
 # -*- coding: utf-8 -*-
 import random
 import numpy as np
@@ -65,7 +65,19 @@ for i in range(cant):
     # Paso 7, Generando población nueva
     poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos, i)
 
+poblacion_final = poblacion[0,]
+print("\n\tMejor generacion")
+print(poblacion_final)
 
+Apt_peso=np.zeros([1,1])
+Apt_cal=np.zeros([1,1])
+
+for h in range (1, len(poblacion_final)):
+    Apt_peso = Apt_peso + poblacion_final[h]*Pesos[h]
+    Apt_cal = Apt_cal + poblacion_final[h]*Calorias[h]
+
+print("\nPeso total\n",Apt_peso)
+print("Calorias total\n",Apt_cal)
 
 
 
