@@ -6,7 +6,9 @@ from sympy import pprint
 
 def nueva_generacion(poblacion, porcentajes, num):
     # Añadiendo columna porcentajes
-    poblacion = np.column_stack((poblacion, porcentajes[:, 4]))
+    #poblacion = np.column_stack((poblacion, porcentajes[:, 4]))
+    poblacion = np.column_stack((poblacion, porcentajes))
+
     print("\tIndividuo con su respectivo porcentaje:")
     print(poblacion)
 
@@ -15,8 +17,13 @@ def nueva_generacion(poblacion, porcentajes, num):
     print("\n\t Individuos ordenados de mayor a menor")
     print(poblacion)
 
+    filtrado = poblacion[:,11] < 2
+    poblacion_filtrada = poblacion[filtrado]
+    print("\n\n\tPOblacion filtrada\n", poblacion_filtrada)
+    poblacion = poblacion_filtrada[poblacion_filtrada[:, 11].argsort()[::-1]]
+    print("\n\n\tPOblacion filtrada FINAL FINAL\n", poblacion)
     print('\n\tNueva generacion')
-    generacion = poblacion[poblacion[0:3,11].argsort()[::-1]]
+    generacion = poblacion_filtrada[poblacion_filtrada[0:3,11].argsort()[::-1]]
     print(generacion)
 
     cromosomas,genes = 3,11
