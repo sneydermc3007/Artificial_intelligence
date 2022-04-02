@@ -69,7 +69,7 @@ def haga():
     ext4.place(x=630, y=190)
     #Barra de chocolate
     ext6 = tk.Label(ventana,text="" + str(poblacion[8]), width="5", height="1", font=("Helvetica 14"), bg='white')
-    ext6.place(x=640, y=240)
+    ext6.place(x=655, y=240)
     #Chocorramo
     ext8 = tk.Label(ventana,text="" + str(poblacion[9]), width="5", height="1", font=("Helvetica 14"), bg='white')
     ext8.place(x=620, y=290)
@@ -81,7 +81,7 @@ def haga():
     ext12.place(x=490, y=440)
     #total calorias
     ext13 = tk.Label(ventana,text="" + str(result[1]), width="5", height="1", font=("Helvetica 14"), bg='white')
-    ext13.place(x=500, y=490)
+    ext13.place(x=470, y=490)
 
 btn = tk.Button(ventana, text="Calcular", width = "20", height = "1", command= haga, font = ("Helvetica 14")
                         ,foreground="white", bg='#007b99', activebackground='white', activeforeground='#007b99')
@@ -92,68 +92,42 @@ sal.place(x=2, y=140)
 #resultados
 ext1_t = tk.Label(ventana,text="Leche de soya: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext1_t.place(x=250, y=140)
-#ext1 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext1.place(x=430, y=140)
 
 ext2_t = tk.Label(ventana,text="Yogurt: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext2_t.place(x=450, y=140)
-#ext2 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext2.place(x=630, y=140)
 
 ext3_t = tk.Label(ventana,text="Galletas: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext3_t.place(x=250, y=190)
-#ext3 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext3.place(x=430, y=190)
 
 ext4_t = tk.Label(ventana,text="Manzana: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext4_t.place(x=450, y=190)
-#ext4 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext4.place(x=630, y=190)
 
 ext5_t = tk.Label(ventana,text="Agua: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext5_t.place(x=250, y=240)
-#ext5 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext5.place(x=430, y=240)
 
 ext6_t = tk.Label(ventana,text="Barra de chocolate: ", width="20", height="1", font=("Helvetica 14"), bg='white')
-ext6_t.place(x=450, y=240)
-#ext6 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext6.place(x=640, y=240)
+ext6_t.place(x=465, y=240)
 
 ext7_t = tk.Label(ventana,text="Pan: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext7_t.place(x=250, y=290)
-#ext7 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext7.place(x=420, y=290)
 
 ext8_t = tk.Label(ventana,text="Chocorramo: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext8_t.place(x=450, y=290)
-#ext8 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext8.place(x=620, y=290)
 
 ext9_t = tk.Label(ventana,text="Huevo: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext9_t.place(x=250, y=340)
-#ext9 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext9.place(x=420, y=340)
 
 ext10_t = tk.Label(ventana,text="RedBull: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext10_t.place(x=450, y=340)
-#ext10 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext10.place(x=620, y=340)
 
 ext11_t = tk.Label(ventana,text="Nueces: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext11_t.place(x=250, y=390)
-#ext11 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext11.place(x=420, y=390)
 
 ext12_t = tk.Label(ventana,text="El peso total es: ", width="30", height="1", font=("Helvetica 14"), bg='white')
 ext12_t.place(x=250, y=440)
-#ext12 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext12.place(x=490, y=440)
 
 ext13_t = tk.Label(ventana,text="El total de calorias es: ", width="20", height="1", font=("Helvetica 14"), bg='white')
 ext13_t.place(x=250, y=490)
-#ext13 = tk.Label(ventana, width="5", height="1", font=("Helvetica 14"), bg='white')
-#ext13.place(x=500, y=490)
 
 w, h = ventana.winfo_screenwidth(), ventana.winfo_screenheight()
 #ventana.geometry("%dx%d+0+0" % (w, h))

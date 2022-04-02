@@ -65,6 +65,7 @@ for i in range(cant):
     # Paso 7, Generando población nueva
     poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos, i)
 
+    
 poblacion_final = poblacion[0,]
 print("\n\tMejor generacion")
 print(poblacion_final)
