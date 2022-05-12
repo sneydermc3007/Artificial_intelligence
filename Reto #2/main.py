@@ -1,4 +1,4 @@
-#!/usr/bin/python
+
 # -*- coding: utf-8 -*-
 import random
 import numpy as np
@@ -19,7 +19,7 @@ cromosomas, genes = 6, 11
 """
 Datos del problema: Leche de soya (500,0.5), Galletas (300,0.1), Agua (100,0.5), Pan (700,0.25),
 Huevo (300,0.15), Nueces (400,0.15), Yogurt (500,0.5), Manzana (400,0.3) 
-barra de chocolate (560, 0.2), Pan (260, 0.15), RedBull (90, 0.2)
+barra de chocolate (560, 0.2), Chocorramo (260, 0.15), RedBull (90, 0.2)
 """
 
 Pesos = [0.5, 0.1, 0.5, 0.25, 0.15, 0.15, 0.5, 0.3, 0.2, 0.15, 0.2]
@@ -65,7 +65,20 @@ for i in range(cant):
     # Paso 7, Generando población nueva
     poblacion = nueva_generacion(mutacion_hijos, evaluacion_hijos, i)
 
+    
+poblacion_final = poblacion[0,]
+print("\n\tMejor generacion")
+print(poblacion_final)
 
+Apt_peso=np.zeros([1,1])
+Apt_cal=np.zeros([1,1])
+
+for h in range (1, len(poblacion_final)):
+    Apt_peso = Apt_peso + poblacion_final[h]*Pesos[h]
+    Apt_cal = Apt_cal + poblacion_final[h]*Calorias[h]
+
+print("\nPeso total\n",Apt_peso)
+print("Calorias total\n",Apt_cal)
 
 
 
