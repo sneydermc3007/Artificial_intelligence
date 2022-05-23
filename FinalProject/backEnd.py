@@ -1,15 +1,20 @@
+from xml.dom.minidom import Element
 from sklearn.cluster import KMeans 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+
 #Kmeans Sklearn
 
 #Import data
-#Primer input, path del archivo <-------------------------------------
-input1 = 'docs/Mall_Customers.csv'
+#rimer input, path del archivo <-------------------------------------
+input1 = './docs/credit_test.csv'
 df_original = pd.read_csv(input1)
 df = pd.read_csv(input1)
+#print(df.shape)
+
 
 for column in df:
     print('Índice de la columna: ', column)
@@ -20,8 +25,8 @@ for column in df:
         for uV in uniqueValues:
             df[column] = df[column].replace(uV, i)
             i+=1
-            
-        #print(df[column].values)
+           
+        print(df[column].values)
     else: print("int") 
 
 df = np.array(df)
@@ -33,7 +38,7 @@ input2 = 3 #Ejemplo  <----------------------------------
 input3 = 4 #Ejemplo  <----------------------------------
 
 data = df[:,[input2, input3]] # se seleccionan las del input
-print(data)
+#print(data)
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
@@ -56,7 +61,7 @@ centroids = clustering.cluster_centers_
 #---------------- Para mostrar en el html---------------------------------#
 
 df_original['Output'] = labels
-print(df_original)
+#print(df_original)
 
 plt.subplot(2,2,1)
 plt.plot(data[:,0], data[:,1], 'ob')
