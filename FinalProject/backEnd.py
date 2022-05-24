@@ -1,44 +1,55 @@
+from itertools import count
 from xml.dom.minidom import Element
 from sklearn.cluster import KMeans 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import streamlit as st
 
 
 #Kmeans Sklearn
 
 #Import data
 #rimer input, path del archivo <-------------------------------------
-input1 = './docs/credit_test.csv'
-df_original = pd.read_csv(input1)
-df = pd.read_csv(input1)
+#input1 = '../docs/Mall_Customers.csv'
+#df_original = pd.read_csv(input1)
+#df = pd.read_csv(input1)
 #print(df.shape)
 
+#print(df.isnull().sum())
 
-for column in df:
-    print('Índice de la columna: ', column)
-    print('Contenido de la columna: ', df[column].dtypes)
-    if (df[column].dtypes == "object"):
-        uniqueValues = df[column].unique().tolist()
-        i=0
-        for uV in uniqueValues:
-            df[column] = df[column].replace(uV, i)
-            i+=1
-           
-        print(df[column].values)
-    else: print("int") 
+def data_types(df):
+    df = df.fillna(0)
+    for column in df :
+        i=[]
+        i.append(column)
+        print(column)
+        print(i)
+    for column in df:
+        print('Índice de la columna: ', column)
+        print('Contenido de la columna: ', df[column].dtypes)
+        if (df[column].dtypes == "object"):
+            uniqueValues = df[column].unique().tolist()
+            i=0
+            for uV in uniqueValues:
+                df[column] = df[column].replace(uV, i)
+                i+=1
+            
+            st.write(df[column].values)
+        else: print("int") 
+    df = np.array(df)
 
-df = np.array(df)
+    return df
 
+"""
 #dos input: las dos columnas para kmeans
 # debe ser en (int) para seleccionarlas por indice
+def index(x,y, df):
+    input2 = x #Ejemplo  <----------------------------------
+    input3 = y #Ejemplo  <----------------------------------
+    data = df[:,[input2, input3]] # se seleccionan las del input
+    st.write(data)
 
-input2 = 3 #Ejemplo  <----------------------------------
-input3 = 4 #Ejemplo  <----------------------------------
-
-data = df[:,[input2, input3]] # se seleccionan las del input
-#print(data)
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
@@ -95,3 +106,4 @@ plt.plot(centroids[:,0], centroids[:,1], '*r')
 
 # plt.legend()
 plt.show()
+"""
