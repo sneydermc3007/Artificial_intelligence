@@ -21,6 +21,8 @@ if uploaded_file is not None:
     option = st.selectbox( 'Seleccione la primera columna: ', options=columns_name, index=0)
     st.write('Has selecionado en tu primera columna:', option)
 
-    option = st.selectbox( 'Seleccione la segunda columna: ', options=columns_name, index=0)
+    option = st.selectbox( 'Seleccione la segunda columna: ', options=columns_name, index=1)
     st.write('Has selecionado en tu sugunda columna:', option)
 
+    values = st.slider('¿Cual es la cantidad de cluster que desea ver?', min_value=2, max_value=5, step=1)
+    st.write('Su cantidad selecciona de cluester:', values)
