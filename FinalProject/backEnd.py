@@ -10,13 +10,14 @@ import matplotlib.pyplot as plt
 
 #Import data
 #rimer input, path del archivo <-------------------------------------
-input1 = './docs/credit_test.csv'
+input1 = '../docs/credit_test.csv'
 df_original = pd.read_csv(input1)
 df = pd.read_csv(input1)
 #print(df.shape)
 
 
 for column in df:
+    df = df.fillna(0)
     print('Índice de la columna: ', column)
     print('Contenido de la columna: ', df[column].dtypes)
     if (df[column].dtypes == "object"):

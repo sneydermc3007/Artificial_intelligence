@@ -1,3 +1,4 @@
+from time import time
 import streamlit as st
 import pandas as pd
 from backEnd import *
@@ -11,4 +12,15 @@ if st.button("Cargar"):
         df = pd.read_csv(file)
         df.head()
         st.write(df)
-        
+
+        print("=======================================================")
+        df = pd.DataFrame(df)
+
+        st.subheader("Columnas del Dataset")
+        df.columns.values
+        print(df.columns.values)
+
+        columns_name = df.columns.values
+
+        option = st.selectbox( 'Seleccione la primera columna: ', options=columns_name, index=0)
+        st.write('Has selecionado:', option)
