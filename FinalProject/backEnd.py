@@ -20,11 +20,6 @@ import streamlit as st
 
 def data_types(df):
     df = df.fillna(0)
-    for column in df :
-        i=[]
-        i.append(column)
-        print(column)
-        print(i)
     for column in df:
         print('Índice de la columna: ', column)
         print('Contenido de la columna: ', df[column].dtypes)

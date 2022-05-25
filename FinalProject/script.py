@@ -1,4 +1,6 @@
+from ast import For
 from time import time
+from numpy import append
 import streamlit as st
 import pandas as pd
 from backEnd import *
@@ -18,13 +20,11 @@ if st.button("Cargar"):
         st.subheader("Columnas del Dataset")
         df.columns.values
         print(df.columns.values)
-
         columns_name = df.columns.values
-
         option = st.selectbox( 'Seleccione la primera columna: ', options=columns_name, index=0)
         st.write('Has selecionado:', option)
-
-
+        
+        
 #x = st.selectbox("Seleccione el indice #1")
 #y = st.number_input('Indice Y')
 #if x and y is not None:
