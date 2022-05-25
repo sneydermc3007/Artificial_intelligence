@@ -11,41 +11,42 @@ import streamlit as st
 
 #Import data
 #rimer input, path del archivo <-------------------------------------
-#input1 = '../docs/Mall_Customers.csv'
-#df_original = pd.read_csv(input1)
-#df = pd.read_csv(input1)
-#print(df.shape)
 
-#print(df.isnull().sum())
+"""input1 = '../docs/Mall_Customers.csv'
+df_original = pd.read_csv(input1)
+df = pd.read_csv(input1)
+print(df.shape)
 
-def data_types(df):
-    df = df.fillna(0)
-    for column in df:
-        print('Índice de la columna: ', column)
-        print('Contenido de la columna: ', df[column].dtypes)
-        if (df[column].dtypes == "object"):
-            uniqueValues = df[column].unique().tolist()
-            i=0
-            for uV in uniqueValues:
-                df[column] = df[column].replace(uV, i)
-                i+=1
-            
-            st.write(df[column].values)
-        else: print("int") 
-    df = np.array(df)
+print(df.isnull().sum())
 
-    return df
 
-"""
+df = df.fillna(0)
+for column in df:
+    print('Índice de la columna: ', column)
+    print('Contenido de la columna: ', df[column].dtypes)
+    if (df[column].dtypes == "object"):
+        uniqueValues = df[column].unique().tolist()
+        i=0
+        for uV in uniqueValues:
+            df[column] = df[column].replace(uV, i)
+            i+=1
+           
+        st.write(df[column].values)
+    else: print("int") 
+df = np.array(df)
+
+
 #dos input: las dos columnas para kmeans
 # debe ser en (int) para seleccionarlas por indice
-def index(x,y, df):
-    input2 = x #Ejemplo  <----------------------------------
-    input3 = y #Ejemplo  <----------------------------------
-    data = df[:,[input2, input3]] # se seleccionan las del input
-    st.write(data)
 
+input2 = 3 #Ejemplo  <----------------------------------
+input3 = 4 #Ejemplo  <----------------------------------
+"""
+def index (optionx, optiony, df):
+    data = df[:,[optionx, optiony]] # se seleccionan las del input
+    return(data)
 
+""" 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(data)
@@ -101,4 +102,5 @@ plt.plot(centroids[:,0], centroids[:,1], '*r')
 
 # plt.legend()
 plt.show()
+
 """
