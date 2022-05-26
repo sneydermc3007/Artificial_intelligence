@@ -3,7 +3,9 @@
 
 # Entorno Virtual
 /venv
+/entorno
 
 # PyCache
 /'Reto #2'/__pycache__
 Reto #2/__pycache__/
+Final #2/__pycache__

@@ -1,16 +1,26 @@
+from itertools import count
+from xml.dom.minidom import Element
 from sklearn.cluster import KMeans 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit as st
+
 
 #Kmeans Sklearn
 
 #Import data
-#Primer input, path del archivo <-------------------------------------
-input1 = 'docs/Mall_Customers.csv'
+#rimer input, path del archivo <-------------------------------------
+
+"""input1 = '../docs/Mall_Customers.csv'
 df_original = pd.read_csv(input1)
 df = pd.read_csv(input1)
+print(df.shape)
 
+print(df.isnull().sum())
+
+
+df = df.fillna(0)
 for column in df:
     print('Índice de la columna: ', column)
     print('Contenido de la columna: ', df[column].dtypes)
@@ -20,21 +30,23 @@ for column in df:
         for uV in uniqueValues:
             df[column] = df[column].replace(uV, i)
             i+=1
-            
-        #print(df[column].values)
+           
+        st.write(df[column].values)
     else: print("int") 
-
 df = np.array(df)
+
 
 #dos input: las dos columnas para kmeans
 # debe ser en (int) para seleccionarlas por indice
 
 input2 = 3 #Ejemplo  <----------------------------------
 input3 = 4 #Ejemplo  <----------------------------------
+"""
+def index (optionx, optiony, df):
+    data = df[:,[optionx, optiony]] # se seleccionan las del input
+    return(data)
 
-data = df[:,[input2, input3]] # se seleccionan las del input
-print(data)
-
+""" 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(data)
@@ -56,7 +68,7 @@ centroids = clustering.cluster_centers_
 #---------------- Para mostrar en el html---------------------------------#
 
 df_original['Output'] = labels
-print(df_original)
+#print(df_original)
 
 plt.subplot(2,2,1)
 plt.plot(data[:,0], data[:,1], 'ob')
@@ -90,3 +102,5 @@ plt.plot(centroids[:,0], centroids[:,1], '*r')
 
 # plt.legend()
 plt.show()
+
+"""
